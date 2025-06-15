@@ -57,7 +57,30 @@ and planet size. And colors :) */
   border-radius: 50%;
   box-shadow: 0 0 84px orange;
 }
-
+#sun {
+  height: 200px;
+  width: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  border-radius: 50%;
+  box-shadow: 0 0 84px orange;
+  object-fit: cover;
+}
+#earth,
+#venus,
+#mercury,
+#mars {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 50px; /* или другой размер, подходящий под изображение */
+  width: 50px;
+  margin-left: -25px;
+  margin-top: -25px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 34px #3a4385;
+}
 #earth {
   position: absolute;
   top: 0;
@@ -169,3 +192,5 @@ and planet size. And colors :) */
 .mars-spin {
   animation: spin-right 68.7s linear infinite;
 }
+
+
