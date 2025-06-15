@@ -6,21 +6,68 @@
 <title>Космический фон</title>
 <link rel="stylesheet"  href="style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="script.js"></script>
-
+<style>
+  /* Стили для плашки с плавностью */
+  #notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    opacity: 0; /* по умолчанию невидима */
+    visibility: hidden; /* чтобы не занимать место и не мешать */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* плавные переходы */
+    z-index: 1000;
+  }
+  /* Когда показываем, делаем видимой */
+  #notification.show {
+    opacity: 1;
+    visibility: visible;
+  }
+</style>
 </head>
 <body>
 <section class="wrapper">
-        <div id="stars"></div>
-        <div class="knopki">
-                    <button class="knopka" onclick="window.location.href='planeti.html'">Перейти к планетам</button>
-                    <button class="knopka1">Настройки</button>
-                    <button class="knopka2">Разработчики</button>
-        </div>
+    <div id="stars"></div>
+    <div class="knopki">
+        <button class="knopka" onclick="window.location.href='planeti.html'">Перейти к планетам</button>
+        <button class="knopka1" id="settingsBtn">Настройки</button>
+        <button class="knopka2" id="devsBtn">Разработчики</button>
+    </div>
 
-        <div id="stars2"></div>
-        <div id="stars3"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
 </section>
 
+<!-- Плашка уведомления -->
+<div id="notification"></div>
+
+<script>
+  const notification = document.getElementById('notification');
+  const devsBtn = document.getElementById('devsBtn');
+  const settingsBtn = document.getElementById('settingsBtn');
+
+  function showNotification(message) {
+    notification.innerText = message;
+    notification.classList.add('show');
+
+    // Удаляем класс через 5 секунд, чтобы исчезла плавно
+    setTimeout(() => {
+      notification.classList.remove('show');
+    }, 1000);
+  }
+
+  devsBtn.addEventListener('click', () => {
+    showNotification('Пока не работает');
+  });
+
+  settingsBtn.addEventListener('click', () => {
+    showNotification('Пока не работает');
+  });
+</script>
 </body>
 </html>
