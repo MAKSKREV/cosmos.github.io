@@ -776,32 +776,28 @@ html {
 .knopki{
   
   position: fixed;
-  top: 40%;
-  left: 40%;
+  padding: 10% 40%;
+
+
   gap: 15px;
 
-  width: 400px;
-  height: 180px;
+  width: 20%;
+  height: 380px;
   display: flex;
   flex-direction: column;
   
 
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .knopki{
-      left: 25%;
-       width: 350px;
+      padding: 10% 40%;
+       width: 30%;
     }
 }
-@media (max-width: 474px) {
+@media (max-width: 540px) {
     .knopki{
-      left: 15%;
-      width: 350px;
-    }
-}
-@media (max-width: 458px) {
-    .knopki{
-      left: 10%;
-      width: 300px;
+      padding: 10% 30%;
+      width: 40%;
+      
     }
 }
