@@ -787,3 +787,21 @@ html {
   
 
 }
+@media (max-width: 768px) {
+    .knopki{
+      left: 25%;
+       width: 350px;
+    }
+}
+@media (max-width: 474px) {
+    .knopki{
+      left: 15%;
+      width: 350px;
+    }
+}
+@media (max-width: 458px) {
+    .knopki{
+      left: 10%;
+      width: 300px;
+    }
+}
