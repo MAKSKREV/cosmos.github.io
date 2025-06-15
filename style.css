@@ -790,14 +790,16 @@ html {
 }
 @media (max-width: 800px) {
     .knopki{
-      padding: 10% 40%;
-       width: 30%;
+      padding: 10% 25%;
+       width: 50%;
+       gap: 20px;
     }
 }
 @media (max-width: 540px) {
     .knopki{
-      padding: 10% 30%;
-      width: 40%;
+      padding: 10% 15%;
+      width: 70%;
+
       
     }
 }
